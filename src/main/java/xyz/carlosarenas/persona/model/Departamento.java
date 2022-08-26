@@ -14,7 +14,7 @@ public class Departamento {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
+	private Long id;
 	@ManyToOne
 	@JoinColumn(name="id_pais")
 	private Pais pais;
@@ -27,6 +27,14 @@ public class Departamento {
 		super();
 		this.pais = pais;
 		this.nombre = nombre;
+	}
+	
+	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
 	}
 	public Pais getPais() {
 		return pais;
